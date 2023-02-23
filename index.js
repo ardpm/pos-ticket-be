@@ -15,10 +15,21 @@ app.use("/", express.static(__dirname + "/public"));
 // DB Check Connection
 
 app.get('/', (req, res) => {
-  res.status(200).send('<h1>SOCIO API v1</h1>');
+  res.status(200).send('<h1>TICKET FESTIVAL</h1>');
 })
 
 // Routing Config
+const usersRouter = require('./src/routers/usersRouter');
+app.use('/user', usersRouter);
+
+const productRouter = require('./src/routers/productRouter');
+app.use('/product', productRouter);
+
+const transactionRouter = require('./src/routers/transactionRouter');
+app.use('/transaction', transactionRouter);
+
+const reportRouter = require('./src/routers/reportRouter');
+app.use('/report', reportRouter);
 
 // Error Handling
 app.use((err, req, res, next) => {
