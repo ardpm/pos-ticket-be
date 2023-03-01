@@ -51,7 +51,7 @@ module.exports = {
                 }
             });
 
-            console.log("Data dari get[0].dataValues", get[0].dataValues);
+            console.log("Data: ", get[0].dataValues);
 
             let { uuid, roleId, username } = get[0].dataValues
             let token = createToken({ uuid });

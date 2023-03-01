@@ -22,8 +22,11 @@ app.get('/', (req, res) => {
 const authRouter = require('./src/routers/authRouter');
 app.use('/auth', authRouter);
 
-const usersRouter = require('./src/routers/usersRouter');
-app.use('/user', usersRouter);
+// const usersRouter = require('./src/routers/usersRouter');
+// app.use('/user', usersRouter);
+
+const categoryRouter = require('./src/routers/categoryRouter');
+app.use('/category', categoryRouter);
 
 // const productRouter = require('./src/routers/productRouter');
 // app.use('/product', productRouter);
