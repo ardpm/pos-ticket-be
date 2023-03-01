@@ -19,8 +19,8 @@ app.get('/', (req, res) => {
 })
 
 // Routing Config
-const authRouter = require('./src/routers/authRouter');
-app.use('/auth', authRouter);
+// const authRouter = require('./src/routers/authRouter');
+// app.use('/auth', authRouter);
 
 // const usersRouter = require('./src/routers/usersRouter');
 // app.use('/user', usersRouter);
