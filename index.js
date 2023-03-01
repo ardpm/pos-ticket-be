@@ -31,8 +31,8 @@ app.get('/', (req, res) => {
 // const transactionRouter = require('./src/routers/transactionRouter');
 // app.use('/transaction', transactionRouter);
 
-// const reportRouter = require('./src/routers/reportRouter');
-// app.use('/report', reportRouter);
+const reportRouter = require('./src/routers/reportRouter');
+app.use('/report', reportRouter);
 
 // Error Handling
 app.use((err, req, res, next) => {
