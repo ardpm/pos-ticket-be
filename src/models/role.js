@@ -1,7 +1,8 @@
 'use strict';
 const {
-  Model
+  Model, HasMany
 } = require('sequelize');
+const users = require('./users');
 module.exports = (sequelize, DataTypes) => {
   class role extends Model {
     /**
@@ -19,5 +20,9 @@ module.exports = (sequelize, DataTypes) => {
     sequelize,
     modelName: 'role',
   });
+
+  // role.associate.HasMany(users);
+  // users.belongsTo(role, {foreignKey: 'roleId'})
+
   return role;
 };
