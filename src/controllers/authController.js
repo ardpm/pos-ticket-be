@@ -3,10 +3,6 @@ const { users, role } = require('../models');
 const sequelize = require('sequelize');
 const bcrypt = require('bcrypt');
 const { createToken } = require('../helper/jwt');
-const fs = require('fs');
-const { v4: uuidv4 } = require('uuid');
-
-let salt = bcrypt.genSaltSync(10);
 
 module.exports = {
     login: async (request, response, next) => {
