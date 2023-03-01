@@ -22,7 +22,7 @@ module.exports = {
         console.log("create category", create)
         return response.status(200).send({
             success: true,
-            message: 'new category has been created',
+            message: 'New category has been created',
             data: create
         })
     },
@@ -31,7 +31,14 @@ module.exports = {
             let modify = await category.update({
                 category: request.body.category
             }, {
-                
+                where: {
+                    id: request.body.id
+                }
+            })
+            response.status(200).send({
+                success: true,
+                message: "Category has updated",
+                data: modify
             })
         } catch (error) {
             console.log(error);
